@@ -1,13 +1,92 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  /* width: 100vw; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1vw 3vw 1vw 2vw;
+}
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: fit-content;
+  height: 60vh;
+}
+section > .div1 {
+  width: 40%;
+}
+section > .div1 > h2 > span > img {
+  border-radius: 50%;
+  width: 80%;
+}
+section > .div1 > h2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.div1 .ratings {
+  display: flex;
+  align-items: flex-start;
+}
+.div1 .ratings .icon {
+  font-size: 1.3vw;
+  color: gold;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.div1 .ratings p {
+  font-size: 1vw;
+  margin-left: 1vw;
+  color: grey;
+}
+section > .div2 {
+  flex-basis: 50%;
+  background-color: brown;
+}
+header h1 {
+  font-size: 4vw;
+  font-weight: 800;
+}
+header > p {
+  font-size: 1.8vw;
+  color: grey;
+}
+header > p > span {
+  cursor: pointer;
+}
+section > div > p {
+  font-size: 1.5vw;
+}
+section > .div2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 50%);
+  grid-column-gap: 0.5vh;
+  grid-row-gap: 0.5vh;
+  width: fit-content;
+  height: inherit;
+}
+
+.img1 {
+  grid-area: 1 / 2 / 2 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img2 {
+  grid-area: 2 / 2 / 3 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img3 {
+  grid-area: 1 / 1 / 3 / 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
